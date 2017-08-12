@@ -6,3 +6,15 @@
     font-size : 20px;
     line-height: 40px;
 }
+
+.no-padding {
+    padding : 0px !important;
+}
+
+.margin-left-10 {
+    margin-left: 10px;
+}
+
+.margin-right-10 {
+    margin-right: 10px;
+}
