@@ -1,0 +1,26 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h1 class="panel-title">
+            Available Products 
+            <span class="badge"> {{$ctrl.products.length}} </span>
+        </h1>
+    </div>
+    <div class="panel-body row">
+        <div ng-repeat="product in $ctrl.products" class="col-md-6 col-sm-12">
+            <div class="panel" ng-class="product.class">
+                <div class="panel-heading">
+                    <h1 class="panel-title">
+                        <span>{{ product.title }}</span>
+                        <span class="pull-right">
+                            <i class="fa fa-times btn" aria-hidden="true" ng-click="$ctrl.deleteProduct(product)" style="padding: 0px !important;">                                
+                            </i>
+                        </span>
+                    </h1>                    
+                </div>
+                <div class="panel-body">
+                    {{product.description}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
