@@ -12,7 +12,9 @@
                     <h1 class="panel-title">
                         <span>{{ product.title }}</span>
                         <span class="pull-right">
-                            <i class="fa fa-info btn no-padding margin-right-10" aria-hidden="true"></i>
+                            <i class="fa fa-info btn no-padding margin-right-10" aria-hidden="true"
+                                ng-click="$ctrl.changeSelectedProduct(product)">
+                            </i>
                             <i class="fa fa-times btn no-padding" aria-hidden="true" 
                                 ng-click="$ctrl.deleteProduct(product)">                                
                             </i>

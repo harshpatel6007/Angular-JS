@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-md-12 col-sm-12">
+        <div class="panel" ng-class="$ctrl.selectedProduct.class">
+            <div class="panel-heading">
+                <h1 class="panel-title">{{ $ctrl.selectedProduct.title }}</h1>
+            </div>
+            <div class="panel-body">
+                <div class="col-md-6 col-sm-6">
+                    <img src="{{$ctrl.selectedProduct.image}}" alt="Product Image not Available" class="img-rounded img-responsive"/>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <!--<div class="media" ng-repeat="comment in $ctrl.selectedProduct.comments">
+                        <div class="media-left">
+                            <img class="media-object" src="..." alt="User image">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                <span class="text-left">
+                                    <i class="fa fa-user" aria-hidden="true"></i> {{comment.user}}
+                                </span>
+                                <span class="text-right pull-right"> 
+                                    <i class="fa fa-clock-o" aria-hidden="true"></i> {{comment.date | date : 'medium'}} 
+                                </span>
+                            </h4>
+                            {{comment.comment}}
+                        </div>
+                    </div>-->
+                    <div class="list-group">
+                        <span class="list-group-item" ng-repeat="comment in $ctrl.selectedProduct.comments" style="border: none !important">
+                            <h4 class="list-group-item-heading">{{comment.comment}}</h4>
+                            <p class="list-group-item-text">
+                                <span class="text-left">
+                                    <i class="fa fa-clock-o" aria-hidden="true"></i> {{comment.date | date : 'medium'}} 
+                                </span>
+                                <span class="text-right pull-right"> 
+                                    <i class="fa fa-user" aria-hidden="true"></i> {{comment.user}}
+                                 </span>
+                            </p>
+                        </span>
+                    </div>
+                    <!--<div class="thumbnail col-md-6 col-sm-6 " ng-repeat="comment in $ctrl.selectedProduct.comments">                        
+                        <div class="caption">
+                            <h3> {{comment.comment}}</h3>
+                            <p> {{comment.user}} </p>                            
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
