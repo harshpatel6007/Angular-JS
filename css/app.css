@@ -28,3 +28,7 @@
     padding-bottom : 0px !important;
     line-height: 50px;
 }
+
+html {
+    overflow-y: scroll;
+}

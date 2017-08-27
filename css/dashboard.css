@@ -21,10 +21,29 @@ body {
  * Top navigation
  * Hide default border to remove 1px line.
  */
-.navbar-fixed-top {
+/*.navbar-fixed-top {
   border: 0;
+}*/
+
+#header-fluid {
+    padding-left: 0px;
 }
 
+.navbar-default {
+    border-color: #dbdbdb !important;
+}
+
+.navbar-nav > .active > a,
+.navbar-nav > .active > a:hover,
+.navbar-nav > .active > a:focus {
+    color : #fff !important;
+    background-color: #428bca !important;
+}
+
+.navbar-nav li a {
+    padding-top : 5px;
+    padding-bottom: 5px;
+}
 /*
  * Sidebar
  */
@@ -41,11 +60,11 @@ body {
     left: 0;
     z-index: 1000;
     display: block;
-    padding: 20px;
+    /*padding: 20px;*/
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     background-color: #f5f5f5;
-    border-right: 1px solid #eee;
+    border-right: 1px solid #dbdbdb;
   }
 }
 

@@ -23,9 +23,9 @@ myApp.config(function($routeProvider, $locationProvider) {
       });     
 });
 
-myApp.run(function($rootScope, $location) {
+myApp.run(function($rootScope, $location, $log) {
     $rootScope.$on( "$routeChangeStart", function() {
-        console.log("Route chage starts");
+        $log.log("Route chage starts " + $location.path());
     });
 });
 

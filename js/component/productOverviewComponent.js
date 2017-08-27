@@ -1,6 +1,6 @@
-function ProductOverviewCtrl($scope) {
+function ProductOverviewCtrl($scope, $log) {
 
-    console.log("Inside product overview controller");
+    $log.log("Inside product overview controller");
 
     $scope.products = [
         {
@@ -54,7 +54,7 @@ function ProductOverviewCtrl($scope) {
 
     //Just for the purpose of analysis, remove in future  
     $scope.$watch('selectedProduct', function () {
-        console.log("main compioennt selected prodcut changed");        
+        $log.log("main compioennt selected prodcut changed");        
     });    
 }
 

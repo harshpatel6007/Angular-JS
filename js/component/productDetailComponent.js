@@ -1,8 +1,8 @@
-function PrdouctDetailCtrl($scope) {
+function PrdouctDetailCtrl($scope, $log) {
     var ctrl = this;
 
-    console.log("Inside product detail controller, products length : " + ctrl.products.length);
-    console.log("Inside product detail controller, selected product is : " + ctrl.selectedProduct);
+    $log.log("Inside product detail controller, products length : " + ctrl.products.length);
+    $log.log("Inside product detail controller, selected product is : " + ctrl.selectedProduct);
 
     
 }

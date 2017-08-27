@@ -1,6 +1,6 @@
-function ProductListCtrl($scope) {
-    console.log("inside product controller ");
-    console.log("$ctrl.products" + this.products[0].title)
+function ProductListCtrl($scope, $log) {
+    $log.log("inside product controller ");
+    $log.log("$ctrl.products" + this.products[0].title)
 
     var ctrl = this;
 
@@ -14,7 +14,7 @@ function ProductListCtrl($scope) {
 
     ctrl.deleteProduct = function (product) {        
         var index = ctrl.products.indexOf(product);
-        console.log("remove product on index : " + index);
+        $log.log("remove product on index : " + index);
         ctrl.products.splice(index, 1);   
         changeSelectedProductAfterDelete();     
     }
