@@ -12,6 +12,7 @@ const path = require('path');
 
 const hostname = '127.0.0.1';
 const port = 3000;
+const rowDataRepository = require('./server/repository/rowDataRepository.js');
 
 console.log("directoiry name : " + path.join(__dirname, 'asset'));
 
@@ -28,5 +29,12 @@ app.get('/', (request, respose) => {
 
 app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
+    // setTimeout(function () {console.log("timeout complete")}, 3000);
+    // console.log('data form server ' + rowDataRepository.getDataWithLimit(10));
 });
 
+app.post('/getRowData', (req, res) => {
+    rowDataRepository.getDataWithLimit(10, function (result) {
+        res.send(result);
+    });
+});
