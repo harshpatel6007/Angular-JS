@@ -8,10 +8,14 @@ var connection;
 var openConnection = function () {
   console.log("open connection");
   MongoClient.connect(url, function (err, db) {
-    assert.equal(null, err);
-    console.log("Connected correctly to server.");
-    connection = db;
-    console.log("connection  " + connection);
+    if(err) {
+      console.log("Error occurred during connecting mongo server");
+      console.error(err);
+    } else {
+      console.log("Connected correctly to server.");
+      connection = db;
+      console.log("connection  " + connection);
+    }
   });
 };
 
